@@ -1,0 +1,44 @@
+		System.out.println(line);
+		for(int i=0;i<result.length;i++){
+		    System.out.printf("%-22.1f%5d %n",result[i].getRATING(),result[i].getCOUNT());
+			
+		}
+		System.out.println(line);
+	}
+	public void printInfoTvEpisodesNotNullResult(){
+		System.out.println("Information of TV Series (Title, Types, Is Adult, Start Year, Season Number, Episode Number,  Votes) which have episode number is NOT NULL");
+		line = new String(new char[164]).replace('\0', '-');
+		System.out.println(line);
+		System.out.printf("|%-83s%-15s%-15s%-15s%-15s%-15s%-6s| %n","TITLE","TYPE","ISADULT","YEAR","SEASONNUMBER","EPIDOSENUMBER","VOTES");
+		System.out.println(line);
+		for(int i=0;i<result.length;i++){
+		    System.out.printf("%-83s%-15s%-15d%-15s%-15d%-15d%-6d %n",result[i].getTITLE(),result[i].getTYPE(),result[i].getISADULT(),result[i].getYEAR(),result[i].getSEASONNUMBER(),result[i].getEPIDOSENUMBER(),result[i].getVOTES());
+			
+		}
+		System.out.println(line);
+	}
+	public void printInfoMoivieRunTimeMinutesResult(){
+		System.out.println("        Information of Movies (Title, Types, RunTimeMinutes) which have RunTimeMinutes=1");
+		System.out.println(line);
+		System.out.printf("|%-83s%-15s%16s| %n","TITLE","TYPES","RUNTIMEMINUTES");
+		System.out.println(line);
+		for(int i=0;i<result.length;i++){
+		    //System.out.println(result[i].getTITLE()+" "+result[i].getTYPE()+" "+result[i].getRUNTIMEMINUTES());
+			//%-15s%03d %n
+			System.out.printf("%-83s%-15s%10d %n", result[i].getTITLE(),result[i].getTYPE(),result[i].getRUNTIMEMINUTES());
+		}
+		System.out.println(line);
+		}
+	public void printInfoMoivieTitleDirectedbyResult(){
+		System.out.println("     Information of Movies (Title) which are  directed by 'William K.L. Dickson' and average rating more than 3");
+		System.out.println(line);
+		System.out.printf("|%-114s| %n","TITLE");
+		System.out.println(line);
+		for(int i=0;i<result.length;i++){
+			System.out.printf("%-83s %n", result[i].getTITLE());
+			
+			
+		}
+		System.out.println(line);
+		}
+}
